@@ -95,6 +95,30 @@ THE SOFTWARE.
 	#define LEDTX_Mode		  GPIO_MODE_OUTPUT_OD
 	#define LEDTX_Active_High 0
 
+#elif defined(BOARD_CANable_SH072)
+	#define USBD_PRODUCT_STRING_FS	 (uint8_t*) "CANable-SH072 gs_usb"
+	#define USBD_MANUFACTURER_STRING (uint8_t*) "SHININ TECH"
+	#define DFU_INTERFACE_STRING_FS	 (uint8_t*) "CANable-SH072 firmware upgrade interface"
+
+	#define TIM2_CLOCK_SPEED		 48000000
+
+	#define CAN_INTERFACE			 CAN
+	#define CAN_CLOCK_SPEED			 48000000
+	#define NUM_CAN_CHANNEL			 1
+
+// SILENT pin not connected
+
+	#define LEDRX_GPIO_Port	  GPIOA
+	#define LEDRX_Pin		  GPIO_PIN_1
+	#define LEDRX_Mode		  GPIO_MODE_OUTPUT_OD
+	#define LEDRX_Active_High 0
+
+	#define LEDTX_GPIO_Port	  GPIOA
+	#define LEDTX_Pin		  GPIO_PIN_0
+	#define LEDTX_Mode		  GPIO_MODE_OUTPUT_OD
+	#define LEDTX_Active_High 0
+
+
 #elif defined(BOARD_CONVERTDEVICE_xCAN)
 	#define USBD_PRODUCT_STRING_FS	 (uint8_t*) "ConvertDevice xCAN"
 	#define USBD_MANUFACTURER_STRING (uint8_t*) "ConvertDevice"
