@@ -1,0 +1,11 @@
+cd build
+
+//使用make
+cmake .. -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE=../cmake/gcc-arm-none-eabi.cmake
+make cantact_fw
+make all
+
+//使用 Ninja，更快，极力推荐！
+cmake .. -G Ninja -DCMAKE_TOOLCHAIN_FILE=../cmake/gcc-arm-none-eabi.cmake
+ninja cantact_fw
+ninja all
